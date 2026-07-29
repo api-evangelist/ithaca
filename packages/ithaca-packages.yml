@@ -1,0 +1,14 @@
+generated: '2026-07-19'
+method: searched
+source: https://registry.npmjs.org/porto
+packages:
+- language: typescript
+  registry: npm
+  name: porto
+  url: https://www.npmjs.com/package/porto
+  install: npm install porto
+  version: 0.2.37
+  license: MIT
+  repository: https://github.com/ithacaxyz/porto
+  description: 'Next-gen Account for Ethereum — authentication & payments on the web (Porto SDK).'
+  official: true

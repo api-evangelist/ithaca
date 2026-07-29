@@ -1,8 +1,26 @@
 aid: ithaca
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ithaca.png
 name: Ithaca
-description: 'Ithaca is a company surfaced as a portfolio company of paradigm and added to the API Evangelist
-  network as a stub for enrichment. Sector: crypto-infrastructure. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: 'Ithaca is a crypto-infrastructure company (backed by Paradigm) building open-source
+  developer tooling to accelerate the crypto frontier. Its flagship product, Porto, is a TypeScript
+  SDK for passwordless authentication and payments on the web — letting applications and wallets create,
+  manage, and interact with next-generation Ethereum accounts (keychains with passkeys, permissions,
+  subscriptions, and native cross-chain interoperability) without passwords, extensions, seed phrases,
+  or API keys. The stack also includes the Account smart contracts (Solidity), the Relay cross-chain
+  transaction router and RPC server (Rust) for EIP-7702 accounts, and Odyssey, an experimental open-source
+  Layer 2 testnet. The Ithaca team has since joined Tempo (tempo.xyz), and the Porto product is sunsetting
+  on 2026-07-24 with users moving to porto.sh.'
 url: https://raw.githubusercontent.com/api-evangelist/ithaca/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +30,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Crypto Infrastructure
+- Ethereum
+- Authentication
+- Payments
+- Account Abstraction
+- Smart Contracts
+- Web3
+- SDK
+- Cross-Chain
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +51,35 @@ maintainers:
 common:
 - type: Website
   url: https://www.ithaca.xyz
+- type: DeveloperPortal
+  url: https://porto.sh
+- type: Documentation
+  url: https://porto.sh/sdk
+- type: GettingStarted
+  url: https://porto.sh/sdk
+- type: Blog
+  url: https://ithaca.xyz/updates
+- type: ChangeLog
+  url: https://porto.sh/changelog
+- type: GitHubOrganization
+  url: https://github.com/ithacaxyz
+- type: SDKs
+  url: packages/ithaca-packages.yml
+- type: Packages
+  url: packages/ithaca-packages.yml
+- type: LLMsTxt
+  url: llms/ithaca-llms.txt
+- type: ChangeLog
+  name: Changelog artifact
+  url: changelog/ithaca-changelog.yml
+- type: Security
+  url: https://porto.sh/contracts/security-and-bug-bounty
+- type: VulnerabilityDisclosure
+  url: security/ithaca-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/ithaca-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

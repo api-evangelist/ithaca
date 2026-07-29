@@ -1,0 +1,62 @@
+# Porto
+
+> Sign in with superpowers. Buy, swap, subscribe, and much more. No passwords or extensions required.
+
+## Docs
+
+- [Changelog](/changelog): Developer Changelog →
+- [Account](/contracts/account): The Porto Account is a keychain that holds user funds, enforces permissions via [Keys](#keys), manages nonces to prevent replay attacks, enables secure executions from the account, and provides native cross-chain interoperability.
+- [Address Book](/contracts/address-book): Contract addresses for Porto infrastructure. All chains use the same addresses for deterministic deployment.
+- [Benchmarks](/contracts/benchmarks): An updated list of benchmarks can be found in the [account repo](https://github.com/ithacaxyz/account/blob/main/snapshots/BenchmarkTest.json).
+- [Getting Started](/contracts): The onchain infrastructure that powers Porto consists of the following contracts:
+- [Interoperability](/contracts/interop): The Porto Stack provides native cross-chain interoperability through a comprehensive settlement system, enabling trustless multi-chain operations and secure token escrow capabilities.
+- [Orchestrator](/contracts/orchestrator): The Orchestrator is a privileged contract that facilitates trustless interactions between the relay and the account.
+- [Security](/contracts/security-and-bug-bounty): ⚠️ Contracts have been audited by Riley H, Kaden & Milotruck.
+- [Simulator](/contracts/simulator): The Simulator is a versatile utility designed to help offchain services and Relays obtain accurate gas estimates for intents efficiently.
+- [Overview](/relay): The Relay uses JSON-RPC 2.0 to facilitate communication between the Porto SDK and the blockchain. The RPC is responsible for building, simulating and sending intents to the contracts on behalf of a user.
+- [Frequently Asked Questions](/sdk/faq): Visit [featuredetect.passkeys.dev](https://featuredetect.passkeys.dev)
+to see if you can use passkeys on your device.
+- [Getting Started](/sdk): The Porto SDK is a TypeScript library designed for Applications and Wallets to create, manage, and
+interact with universal next-gen accounts on Ethereum.
+- [Deploying to Production](/sdk/production): Below are some things to consider before deploying to production.
+- [Escrow](/contracts/interop/escrow): The Escrow contract facilitates secure token holding with cross-chain settlement capabilities, enabling trustless multi-party transactions with automatic refund mechanisms.
+- [Settlement](/contracts/interop/settlement): Settlement providers enable cross-chain transaction finality verification, serving as the bridge between multi-chain operations and on-chain escrow resolution.
+- [Chains](/sdk/api/chains): Porto chains are re-exported from [Viem](https://viem.sh/docs/chains/introduction).
+- [Dialog](/sdk/api/dialog): Porto dialog is a renderer that displays the account interface in a modal dialog.
+As with everything else, Porto comes pre-configured with a default dialog renderer suitable for the user's browser of choice.
+That means that you don't need to do anything to use the dialog.
+- [Mode](/sdk/api/mode): Dialog mode embeds the hosted Porto Dialog (an iframe pointing to `id.porto.sh`) and forwards every request that requires user interaction to that dialog.
+- [Router](/sdk/api/router): Instantiates a server framework-agnostic router for Porto.
+- [Storage](/sdk/api/storage): Porto comes pre-configured with a storage layer suited for both browser and non-browser environments.
+- [Theme](/sdk/api/theme): See the `theme` option of [Mode.dialog](/sdk/api/mode#modedialog) to learn how to use custom themes with Porto. When using a custom theme with `Mode.dialog`, all properties but `colorScheme` are optional and will fall back to the default theme values.
+- [Authentication (SIWE)](/sdk/guides/authentication): Next, we will set up our API endpoints for our authentication flow.
+- [Onboard & Discover Accounts](/sdk/guides/discover-accounts): The ability for a user to onboard & connect their account is a core function for any Application. It allows users to perform tasks such as: making payments, authorizing subscriptions, and authenticating with offchain services.
+- [Guest Mode](/sdk/guides/guest-mode): Guest mode allows users to send transactions without pre-connecting a wallet. Porto automatically handles the account connection flow when the transaction is submitted.
+- [Payments](/sdk/guides/payments): This guide will walk you through the process of creating a payment flow from the perspective of
+interacting with a contract with [EIP-5792](https://eips.ethereum.org/EIPS/eip-5792) (the [`useSendCalls` Hook](https://wagmi.sh/react/api/hooks/useSendCalls))
+to submit a bundle of contract calls to Porto.
+- [Permissions](/sdk/guides/permissions): The permissions are setup such that the user can spend `10 EXP` per hour. We can either use the
+[`useGrantPermissions` hook](/sdk/wagmi/useGrantPermissions) to grant the permissions,
+or we can add the permissions to the `connect` function. We will do the latter.
+- [Fee Sponsoring](/sdk/guides/sponsoring): This guide will demonstrate how you can leverage Fee Sponsoring in your Application to cover
+fees for your users.
+- [Subscriptions](/sdk/guides/subscriptions): Coming soon. 🚧
+- [Theming](/sdk/guides/theming): Porto allows customize the appearance of the dialog through its theming system. Themes contain various color properties targeting different parts of the dialog, such as the color of the various surfaces, text, buttons and more. See the [Theme API](/sdk/api/theme) to learn more about the available properties and in which context they are used.
+- [Capabilities](/sdk/rpc/capabilities): Porto supports [EIP-5792 Capabilities](https://eips.ethereum.org/EIPS/eip-5792#wallet_getcapabilities).
+Capabilites are extension features that allow for extra functionality to be requested on particular JSON-RPC requests such as `wallet_connect` and `wallet_sendCalls`, and also enable additional JSON-RPC methods. Such features could be requesting to [grant permissions](#permissions) on connection, or [setting a custom fee token](#feetoken).
+- [Overview](/sdk/rpc)
+- [Account](/sdk/viem/Account): The Porto `Account` is a light wrapper around the Viem Account that adds support
+for [Porto `Key`s](/sdk/viem/Key).
+- [Key](/sdk/viem/Key): The Porto `Key` provides key management for [Porto `Account`s](/sdk/viem/Account) with support
+for various key types including [WebAuthn (passkeys)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API),
+[WebCrypto-P256](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API), P256, and Secp256k1.
+- [Server Actions](/sdk/viem/RelayActions): Porto provides a set of Server Actions for **Wallet & Account Developers**. These Actions are designed to be used with
+a Viem Client that is connected to the [Porto Relay](/relay).
+- [Wallet Actions](/sdk/viem/WalletActions): Porto provides a set of Wallet Actions for **Application Developers**. These Actions are designed to be used with
+a Viem Client that is connected to a Porto's EIP-1193 Provider.
+- [Overview](/sdk/viem): Porto ships with first-class modules that extend and compose with [Viem](https://viem.sh),
+such as: [Wallet Actions](/sdk/viem/WalletActions), [Relay Actions](/sdk/viem/RelayActions), a Porto-specific
+[Account implementation](/sdk/viem/Account), and more.
+- [Connector](/sdk/wagmi/connector): Porto connector is a [Wagmi](https://wagmi.sh) compatible connector for using Porto with [Wagmi `Config`](https://wagmi.sh/core/api/createConfig).
+- [Actions.getAssets](/sdk/wagmi/getAssets): VanillaJS action for retrieving assets for an account. Uses Viem's [`getAssets`](/sdk/viem/WalletActions/getAssets) under the hood.
+- [Actions.getCallsHistory](/sdk/wagmi/getCallsHistory): VanillaJS action for retrieving call bundle history for an account. Uses Viem's [`getCallsHistory`](/sdk/viem/RelayActions/getCallsHistory) under the hood.

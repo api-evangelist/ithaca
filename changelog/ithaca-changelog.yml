@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://porto.sh/changelog
+docs: https://porto.sh/changelog
+scheme: date-based
+package_versioning: semver
+package_current_version: 0.2.37
+note: 'The Porto product is sunsetting on 2026-07-24; see https://ithaca.xyz/updates/sunsetting-porto.'
+entries:
+- date: '2025-08-19'
+  title: Multi-Chain Support
+  highlights:
+  - Porto live in production with multi-chain support across five mainnet networks.
+  breaking: false
+- date: '2025-06-20'
+  title: Email Support & Removal of PREP
+  highlights:
+  - Added optional email capture during sign-up.
+  - Replaced PREP with ephemeral private keys for streamlined account creation.
+  breaking: true
+- date: '2025-05-28'
+  title: Developer Preview
+  highlights:
+  - Porto TypeScript library released with Base Sepolia support.
+  - Authentication via passkeys or OAuth.
+  breaking: false
