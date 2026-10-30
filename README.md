@@ -64,6 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Ithaca is a company surfaced as a portfolio company of paradigm and added to the API Evangelist network as a stub for enrichment. Sector: crypto-infrastructure. This profile is a lead awaiting the enrichment pipeline.
+Ithaca is a crypto-infrastructure company (backed by Paradigm) building open-source developer tooling to accelerate the crypto frontier. Its flagship product, Porto, is a TypeScript SDK for passwordless authentication and payments on the web — letting applications and wallets create, manage, and interact with next-generation Ethereum accounts (keychains with passkeys, permissions, subscriptions, and native cross-chain interoperability) without passwords, extensions, seed phrases, or API keys. The stack also includes the Account smart contracts (Solidity), the Relay cross-chain transaction router and RPC server (Rust) for EIP-7702 accounts, and Odyssey, an experimental open-source Layer 2 testnet. The Ithaca team has since joined Tempo (tempo.xyz), and the Porto product is sunsetting on 2026-07-24 with users moving to porto.sh.
 
-Backed by: paradigm — https://www.ithaca.xyz
+**Areas:** Company · Crypto Infrastructure · Ethereum · Authentication · Payments · Account Abstraction · Smart Contracts · Web3 · SDK · Cross-Chain
+
+## Ithaca on APIs.io
+
+Everything profiled for Ithaca is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ithaca/](https://apis.io/providers/ithaca/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Ithaca Domain Security](https://apis.io/security/ithaca/ithaca-domain-security/)
+- [Ithaca Vulnerability Disclosure](https://apis.io/security/ithaca/ithaca-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.ithaca.xyz)
+- [Documentation](https://porto.sh/sdk)
+- [Getting started](https://porto.sh/sdk)
+- [Changelog](https://porto.sh/changelog)
+- [Blog](https://ithaca.xyz/updates)
+- [Security](https://porto.sh/contracts/security-and-bug-bounty)
+- [GitHub](https://github.com/ithacaxyz)
+
+## API Evangelist rating
+
+**Kin Score 16.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.7** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ithaca/](https://apis.io/providers/ithaca/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Ithaca: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ithaca/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
